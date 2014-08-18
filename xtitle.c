@@ -119,9 +119,15 @@ char* expand_escapes(const char *src)
 	char *start = dest;
 	char c;
 	while ((c = *(src++))) {
-		if (c == '\'' || c == '\"' || c == '\\')
+		if (c == '\'') {
 			*(dest++) = '\\';
-		*(dest++) = c;
+			*(dest++) = '\"';
+		}
+		else {
+			if (c == '\"' || c == '\\')
+				*(dest++) = '\\';
+			*(dest++) = c;
+		}
 	}
 	*dest = '\0';
 	return start;

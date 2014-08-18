@@ -10,3 +10,6 @@ If arguments are given, outputs the title of each arguments, otherwise outputs t
 - `-s` — Activate the *snoop* mode.
 - `-e` — Escape the following characters: ', " and \\.
 - `-f FORMAT` — Use the given `printf` format.
+
+# Fork
+i3cat compatible, escapes ' in the title with \\".
